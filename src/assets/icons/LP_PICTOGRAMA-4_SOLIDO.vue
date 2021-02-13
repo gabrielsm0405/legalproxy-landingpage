@@ -1,0 +1,4 @@
+<template>
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 227.73"><path class="cls-1" d="M138.65,163.73v15a7.2,7.2,0,0,1-7.21,7.2h-72a7.2,7.2,0,0,1-7.2-7.2V49.05a7.2,7.2,0,0,1,7.2-7.2h72a7.2,7.2,0,0,1,7.21,7.2V118.6"/><polyline class="cls-1" points="109.84 41.85 109.84 52.35 81.03 52.35 81.03 41.85"/><polyline class="cls-1" points="91.35 130.34 106.95 114.73 137.23 145.01 193.27 88.96"/><polyline class="cls-1" points="197.77 107.17 197.77 84.46 175.07 84.46"/></svg>
+</template>
+<style scoped>.cls-1{fill:none;stroke:#262626;stroke-linecap:square;stroke-miterlimit:8;stroke-width:5.86px;}</style>

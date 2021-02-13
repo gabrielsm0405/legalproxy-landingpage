@@ -1,0 +1,4 @@
+<template>
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 227.73"><line class="cls-1" x1="75.21" y1="178.58" x2="164.11" y2="178.58"/><line class="cls-1" x1="90.71" y1="163.88" x2="148.61" y2="163.88"/><path class="cls-1" d="M116.24,126.43h-74a21.54,21.54,0,0,1-2.59-42.92,36.93,36.93,0,0,1,69-11.45,27.74,27.74,0,0,1,7.45-1"/><rect class="cls-1" x="134.92" y="68.36" width="34.12" height="46.87" transform="translate(-20.4 134.35) rotate(-45)"/><line class="cls-1" x1="157.81" y1="50.7" x2="193.08" y2="85.97"/><line class="cls-1" x1="170.67" y1="110.49" x2="229.28" y2="169.09"/><line class="cls-1" x1="146.15" y1="132.9" x2="110.88" y2="97.63"/></svg>
+</template>
+<style scoped>.cls-1{fill:none;stroke:#262626;stroke-linecap:square;stroke-miterlimit:8;stroke-width:5.86px;}</style>

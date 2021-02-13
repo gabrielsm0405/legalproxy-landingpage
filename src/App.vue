@@ -1,32 +1,41 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <Toolbar/>
+    <v-main>
+      <Init id="init" />
+      <Product id="product" />
+      <WhoWeAre id="who_we_are" />
+      <Trainings id="trainings" />
+      <Contact id="contact" />
+      <Faq id="faq" />
+    </v-main>
+    <Footer />
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<style src="./scss/styles.css"></style>
 
-#nav {
-  padding: 30px;
-}
+<script>
+import Toolbar from './components/Toolbar';
+import Init from './components/Init.vue';
+import Product from './components/Product.vue';
+import WhoWeAre from './components/WhoWeAre.vue';
+import Trainings from './components/Trainings.vue';
+import Contact from './components/Contact.vue';
+import Faq from './components/Faq.vue';
+import Footer from './components/Footer.vue';
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+export default {
+  name: 'App',
+  components: {
+    Toolbar,
+    Init,
+    Product,
+    WhoWeAre,
+    Trainings,
+    Contact,
+    Faq,
+    Footer
+  }
+};
+</script>
