@@ -27,28 +27,39 @@
 
 <script>
 export default {
+    data: () => ({
+        going: false
+    }),
     methods: {
         go_to_legalproxy(){
             window.open('https://app.legalproxy.com.br/')
         },
         scroll_to(to) {
-            to = document.getElementById(to).offsetTop
+            if(!this.going){
+                to = document.getElementById(to).offsetTop
 
-            if (window.scrollY == to) return;
-            
-            const scrollStep = Math.PI / (500 / 10);
-            var count = 0, currPos;
-            
-            var scrollInterval = setInterval(function(){
-                let diff = to - window.scrollY
+                if (window.scrollY == to) return;
                 
-                if (Math.abs(diff) > 0.7) {
-                    count = count + 1;
-                    console.log(diff * (0.5 - 0.5 * Math.cos(count * scrollStep)))
-                    window.scrollTo(0, window.scrollY + diff * (0.5 - 0.5 * Math.cos(count * scrollStep)));
-                }
-                else { clearInterval(scrollInterval); }
-            },10);
+                const scrollStep = Math.PI / (500 / 10);
+                var count = 0, currPos;
+                
+                this.going = true
+
+                var scrollInterval = setInterval(function(){
+                    let diff = to - window.scrollY
+                    
+                    if (Math.abs(diff) > 0.7) {
+                        count = count + 1;
+                        
+                        window.scrollTo(0, window.scrollY + diff * (0.5 - 0.5 * Math.cos(count * scrollStep)));
+                    }
+                    else { 
+                        clearInterval(scrollInterval); 
+
+                        this.going = false
+                    }
+                }.bind(this),10);
+            }
         }
     }
 }
