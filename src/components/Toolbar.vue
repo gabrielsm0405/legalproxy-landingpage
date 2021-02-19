@@ -14,8 +14,8 @@
                 <v-btn text @click="scroll_to('product')">Produto</v-btn>
                 <v-btn text @click="scroll_to('who_we_are')">Quem Somos</v-btn>
                 <v-btn text @click="scroll_to('trainings')">Treinamentos</v-btn>
+                <v-btn text @click="scroll_to('faq')">FAQ</v-btn>
                 <v-btn text @click="scroll_to('contact')">Contato</v-btn>
-                <!--<v-btn text @click="scroll_to('faq')">FAQ</v-btn>-->
             </v-toolbar-items>
 
             <v-spacer></v-spacer>
