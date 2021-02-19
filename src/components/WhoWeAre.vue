@@ -3,12 +3,12 @@
         <v-col sm="8" cols="12" class="ma-0 pa-0">
             <v-card min-height="calc( 100vh - 100px )" tile flat color="amarelo_claro" class="pa-5">
                 <v-container>
-                    <v-card-title class="text-h2">
+                    <v-card-title class="text-h4">
                         Quem somos
                     </v-card-title>
                     
                     <v-card-text class="mt-16">
-                        <p class="text-h4"><b>Somos apaixonados por Direito e Tech</b></p>
+                        <p class="text-h5"><b>Somos apaixonados por Direito e Tech</b></p>
 
                         <p class="text-h6 mt-16">
                             Através da iniciativa de profissionais com vasta experiência no meio jurídico juntamente com pessoas que respiram tecnologia, surgiu a ideia de simplificar a busca e o gerenciamento de prepostos através da tecnologia. 

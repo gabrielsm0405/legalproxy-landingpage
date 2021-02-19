@@ -19,7 +19,7 @@
         </v-row>-->
         <v-row class="ma-0">
             <v-card color="amarelo_claro" flat tile min-height="calc( (100vh - 100px)/2 )" width="100%">
-                <v-card-title class="text-h5 pl-10 pt-10 pb-10">
+                <v-card-title class="text-h4 pl-10 pt-10 pb-10">
                     Perguntas frequentes
                 </v-card-title>
 
