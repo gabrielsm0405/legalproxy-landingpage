@@ -22,7 +22,7 @@
                         </p>
 
                         <p class="text-h6 mt-16">
-                            Nossos treinamentos envolvem XXXXXXXXXX, XXXXXXXXXX, XXXXXXXX e XXXXXXXXX, entre diversos outros temas pertinentes à atuação do preposto em audiências.
+                            Nossos treinamentos envolvem as esferas Cível e Trabalhista, entre diversos outros temas pertinentes à atuação do preposto em audiências.
                         </p>
                     </v-card-text>
                 </v-container>

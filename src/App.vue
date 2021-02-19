@@ -6,8 +6,8 @@
       <Product id="product" />
       <WhoWeAre id="who_we_are" />
       <Trainings id="trainings" />
-      <Contact id="contact" />
       <Faq id="faq" />
+      <Contact id="contact" />
     </v-main>
     <Footer />
   </v-app>
