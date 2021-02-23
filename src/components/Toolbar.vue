@@ -11,16 +11,17 @@
             <v-spacer></v-spacer>
 
             <v-toolbar-items>
-                <v-btn x-large text @click="scroll_to('product')">Produto</v-btn>
-                <v-btn x-large text @click="scroll_to('who_we_are')">Quem Somos</v-btn>
-                <v-btn x-large text @click="scroll_to('trainings')">Treinamentos</v-btn>
-                <v-btn x-large text @click="scroll_to('faq')">FAQ</v-btn>
-                <v-btn x-large text @click="scroll_to('contact')">Contato</v-btn>
+                <v-btn x-large text @click="scroll_to('init')" :class="$vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':'text-h8'">Início</v-btn>
+                <v-btn x-large text @click="scroll_to('product')" :class="$vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':'text-h8'">Produto</v-btn>
+                <v-btn x-large text @click="scroll_to('who_we_are')" :class="$vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':'text-h8'">Quem Somos</v-btn>
+                <v-btn x-large text @click="scroll_to('trainings')" :class="$vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':'text-h8'">Treinamentos</v-btn>
+                <v-btn x-large text @click="scroll_to('faq')" :class="$vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':'text-h8'">FAQ</v-btn>
+                <v-btn x-large text @click="scroll_to('contact')" :class="$vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':'text-h8'">Contato</v-btn>
             </v-toolbar-items>
 
             <v-spacer></v-spacer>
 
-            <v-btn rounded color="amarelo_claro primary--text" @click="go_to_legalproxy">Entrar</v-btn>
+            <v-btn rounded color="amarelo_claro primary--text" @click="go_to_legalproxy" :class="$vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':'text-h8'">Entrar</v-btn>
         </v-app-bar>
     </v-card>
 </template>

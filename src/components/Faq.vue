@@ -19,23 +19,35 @@
         </v-row>-->
         <v-row class="ma-0">
             <v-card color="amarelo_claro" flat tile min-height="calc( (100vh - 100px)/2 )" width="100%">
-                <v-card-title class="text-h4 pl-10 pt-10 pb-10">
+                <v-card-title :class="($vuetify.breakpoint.xl?'text-h3':$vuetify.breakpoint.lg?'text-h4':'text-h5')+' pl-10 pt-10 pb-10'">
                     Perguntas frequentes
                 </v-card-title>
 
                 <v-card-text class="pl-10">
                     <v-row>
                         <v-col sm="4" cols="12">
-                            <p class="text-h5">
+                            <p :class="$vuetify.breakpoint.xl?'text-h4':$vuetify.breakpoint.lg?'text-h5':'text-h6'">
                                 Empresa
                             </p>
-                            <v-row class="ma-0 mb-2" v-for="question in company_questions" :key="question"><a><b>{{question}}</b></a></v-row>
+                            <v-row 
+                                :class="'ma-0 mb-2 '+($vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':'text-h8')"
+                                v-for="question in company_questions" 
+                                :key="question"
+                            >
+                                <a>{{question}}</a>
+                            </v-row>
                         </v-col>
                         <v-col sm="4" cols="12">
-                            <p class="text-h5">
+                            <p :class="$vuetify.breakpoint.xl?'text-h4':$vuetify.breakpoint.lg?'text-h5':'text-h6'">
                                 Proxie
                             </p>
-                            <v-row class="ma-0 mb-2" v-for="question in company_questions" :key="question"><a><b>{{question}}</b></a></v-row>
+                            <v-row 
+                                :class="'ma-0 mb-2 '+($vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':'text-h8')"
+                                v-for="question in company_questions" 
+                                :key="question"
+                            >
+                                <a>{{question}}</a>
+                            </v-row>
                         </v-col>
                     </v-row>
                 </v-card-text>
@@ -48,9 +60,9 @@
 export default {
     data: () => ({
         company_questions: [
-            'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-            'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-            'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+            'Lorem Ipsum is simply dummy text of the printing1',
+            'Lorem Ipsum is simply dummy text of the printing2',
+            'Lorem Ipsum is simply dummy text of the printing3',
         ]
     })
 }
