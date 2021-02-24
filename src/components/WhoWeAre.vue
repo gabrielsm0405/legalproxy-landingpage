@@ -8,13 +8,13 @@
                     </v-card-title>
                     
                     <v-card-text class="mt-16">
-                        <p :class="$vuetify.breakpoint.xl?'text-h3':$vuetify.breakpoint.lg?'text-h5':'text-h6'"><b>Somos apaixonados por Direito e Tech</b></p>
+                        <p :class="$vuetify.breakpoint.xl?'text-h4':$vuetify.breakpoint.lg?'text-h5':'text-h6'"><b>Somos apaixonados por Direito e Tech</b></p>
 
-                        <p :class="'mt-16 '+($vuetify.breakpoint.xl?'text-h4':$vuetify.breakpoint.lg?'text-h5':'text-h6')">
+                        <p :class="'mt-16 '+($vuetify.breakpoint.xl?'text-h5':$vuetify.breakpoint.lg?'text-h6':'text-h7')">
                             Através da iniciativa de profissionais com vasta experiência no meio jurídico juntamente com pessoas que respiram tecnologia, surgiu a ideia de simplificar a busca e o gerenciamento de prepostos através da tecnologia. 
                         </p>
 
-                        <p :class="'mt-10 '+($vuetify.breakpoint.xl?'text-h4':$vuetify.breakpoint.lg?'text-h5':'text-h6')">
+                        <p :class="'mt-10 '+($vuetify.breakpoint.xl?'text-h5':$vuetify.breakpoint.lg?'text-h6':'text-h7')">
                             Somos uma legaltech focada na intermediação de prepostos de forma totalmente online e automatizada. 
                         </p>
 

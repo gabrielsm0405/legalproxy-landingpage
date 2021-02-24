@@ -24,7 +24,7 @@
                                 rounded 
                                 color="amarelo_claro primary--text" 
                                 :width="$vuetify.breakpoint.xl?'240':$vuetify.breakpoint.lg?'220':'200'"
-                                :class="$vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':'text-h8'"
+                                :class="$vuetify.breakpoint.xl?'text-h7':$vuetify.breakpoint.lg?'text-h8':'text-h9'"
                             >
                                 Sou empresa
                             </v-btn>
@@ -34,7 +34,7 @@
                                 rounded 
                                 color="proxy_color_light primary--text" 
                                 :width="$vuetify.breakpoint.xl?'240':$vuetify.breakpoint.lg?'220':'200'"
-                                :class="$vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':'text-h8'"
+                                :class="$vuetify.breakpoint.xl?'text-h7':$vuetify.breakpoint.lg?'text-h8':'text-h9'"
                             >
                                 Quero ser preposto
                             </v-btn>
@@ -51,7 +51,7 @@
                     </v-row>
 
                     <div :style="{'position': 'absolute', 'bottom': '0'}">
-                        <v-row justify="center" :class="'mt-3 ' + ($vuetify.breakpoint.xl?'text-h4':$vuetify.breakpoint.lg?'text-h5':'text-h6')">
+                        <v-row justify="center" :class="'mt-3 ' + ($vuetify.breakpoint.xl?'text-h5':$vuetify.breakpoint.lg?'text-h6':'text-h7')">
                             <b>{{card.title}}</b>
                         </v-row>
                         

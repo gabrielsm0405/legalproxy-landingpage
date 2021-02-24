@@ -15,7 +15,7 @@
                             <v-col cols="2">
                                 <v-icon :size="$vuetify.breakpoint.xl?'220':'120'" v-text="card.icon" />
                             </v-col>
-                            <v-col :class="$vuetify.breakpoint.xl?'text-h4':$vuetify.breakpoint.lg?'text-h5':'text-h6'">
+                            <v-col :class="$vuetify.breakpoint.xl?'text-h5':$vuetify.breakpoint.lg?'text-h6':'text-h7'">
                                 {{card.text}}
                             </v-col>
                         </v-row>
