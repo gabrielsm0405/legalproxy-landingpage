@@ -1,7 +1,7 @@
 <template>
     <v-row class="ma-0">
         <v-col sm="8" cols="12" class="ma-0 pa-0">
-            <v-card min-height="calc( 100vh - 100px )" tile flat color="amarelo_claro" class="pa-5">
+            <v-card min-height="calc( 100vh - 70px )" tile flat color="amarelo_claro" class="pa-5">
                 <v-container>
                     <v-card-title :class="$vuetify.breakpoint.xl?'text-h2':$vuetify.breakpoint.lg?'text-h3':'text-h4'">
                         Quem somos
@@ -24,7 +24,7 @@
             </v-card>
         </v-col>
         <v-col class="ma-0 pa-0">
-            <v-card min-height="calc( 100vh - 100px )" :img="myImage" tile flat />
+            <v-card min-height="calc( 100vh - 70px )" :img="myImage" tile flat />
         </v-col>
     </v-row>
 </template>

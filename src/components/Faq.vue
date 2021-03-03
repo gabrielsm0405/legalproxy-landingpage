@@ -1,7 +1,7 @@
 <template>
-    <v-card height="calc( (100vh - 100px)/2 )" flat tile>
+    <v-card height="calc( (100vh - 70px)/2 )" flat tile>
         <!--<v-row class="ma-0">
-            <v-card color="amarelo_claro" flat tile min-height="calc( (100vh - 100px)/2 )" width="100%">
+            <v-card color="amarelo_claro" flat tile min-height="calc( (100vh - 70px)/2 )" width="100%">
                 <v-card-title>
                     <v-row justify="center" class="ma-0 text-h3">
                         Como podemos ajudar?
@@ -18,7 +18,7 @@
             </v-card>
         </v-row>-->
         <v-row class="ma-0">
-            <v-card color="amarelo_claro" flat tile min-height="calc( (100vh - 100px)/2 )" width="100%">
+            <v-card color="amarelo_claro" flat tile min-height="calc( (100vh - 70px)/2 )" width="100%">
                 <v-card-title :class="($vuetify.breakpoint.xl?'text-h3':$vuetify.breakpoint.lg?'text-h4':'text-h5')+' pl-10 pt-10 pb-10'">
                     Perguntas frequentes
                 </v-card-title>

@@ -1,16 +1,16 @@
 <template>
     <v-row class="ma-0">
         <v-col sm="4" cols="12" class="ma-0 pa-0">
-            <v-card min-height="calc( 100vh - 100px )" :img="myImage" tile flat />
+            <v-card min-height="calc( 100vh - 70px )" :img="myImage" tile flat />
         </v-col>
         <v-col class="px-0 ma-0 pb-0">
-            <v-card min-height="calc( 100vh - 100px )" flat tile>
+            <v-card min-height="calc( 100vh - 70px )" flat tile>
                 <v-row justify="center">
                     <v-card-title :class="$vuetify.breakpoint.xl?'text-h2':$vuetify.breakpoint.lg?'text-h3':'text-h4'">Produto</v-card-title>
                 </v-row>
 
                 <v-card-text class="pa-0 mt-8">
-                    <v-card v-for="card in cards" :key="card.icon" color="proxy_color_light" min-height="calc((100vh - 350px)/3)" class="mb-8" flat tile>
+                    <v-card v-for="card in cards" :key="card.icon" color="proxy_color_light" min-height="calc((100vh - 320px)/3)" class="mb-8" flat tile>
                         <v-row class="ma-0" align="center" :style="{'position':'absolute', 'top':'50%', 'transform': 'translate(0, -50%)'}">
                             <v-col cols="2">
                                 <v-icon :size="$vuetify.breakpoint.xl?'220':'120'" v-text="card.icon" />

@@ -1,23 +1,27 @@
 <template>
-    <v-card height="calc( 100vh - 100px )" flat tile>
+    <v-card height="calc( 100vh - 70px )" flat tile>
         <v-row class="ma-0">
             <v-col sm="4" cols="12" class="ma-0 pa-0">
-                <v-card color="amarelo_claro" flat tile height="calc( (100vh - 130px)/2 )">
+                <v-card color="amarelo_claro" flat tile height="calc( (100vh - 100px)/2 )">
                     <v-container fill-height fluid>
-                        <v-card-title :class="$vuetify.breakpoint.xl?'text-h3':$vuetify.breakpoint.lg?'text-h4':'text-h5'">
+                        <v-card-title 
+                            :class="$vuetify.breakpoint.xl?'text-h3':$vuetify.breakpoint.lg?'text-h4':!$vuetify.breakpoint.mobile?'text-h5':'text-h6'"
+                        >
                             <p class="text-break">Somos uma <i>legaltech</i> focada na intermediação de prepostos</p>
                         </v-card-title>
 
                         <v-card-text class="pr-16 text-break">
-                            <p :class="$vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':'text-h8'">
+                            <p 
+                                :class="$vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':!$vuetify.breakpoint.mobile?'text-h8':'text-h9'"
+                            >
                                 Aliamos tecnologia a um método inovador a fim de oferecer profissionais certificados para atender sua necessidade, otimizando custo e tempo
                             </p>
                         </v-card-text>
                     </v-container>
                 </v-card>
             </v-col>
-            <v-col class="ma-0 pa-0">
-                <v-card height="calc( (100vh - 130px)/2 )" :img="myImage" tile flat>
+            <v-col class="ma-0 pa-0" v-if="!$vuetify.breakpoint.mobile">
+                <v-card height="calc( (100vh - 100px)/2 )" :img="myImage" tile flat>
                     <div :style="{'position': 'absolute', 'bottom': '0', 'width': '100%'}">
                         <v-row class="ma-0 mb-5" justify="center">
                             <v-btn 
@@ -43,9 +47,9 @@
                 </v-card>
             </v-col>
         </v-row>
-        <v-row class="ma-0">
-            <v-col v-for="card in cards" :key="card.icon" sm="3" cols="12" class="pa-5">
-                <v-card flat tile color="tertiary" min-height="calc( (100vh - 130px)/2 )">
+        <v-row class="ma-0" v-if="!$vuetify.breakpoint.mobile">
+            <v-col v-for="card in cards" :key="card.icon" cols="3" class="pa-5">
+                <v-card flat tile color="tertiary" min-height="calc( (100vh - 100px)/2 )">
                     <v-row class="ma-0" justify="center">
                         <v-icon :size="$vuetify.breakpoint.xl?'300':'200'" v-text="card.icon" />
                     </v-row>
@@ -62,6 +66,7 @@
                 </v-card>
             </v-col>
         </v-row>
+        
     </v-card>
 </template>
 

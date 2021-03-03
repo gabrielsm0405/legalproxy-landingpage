@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify/lib/framework';
+import '@fortawesome/fontawesome-free/css/all.css'
 
 import LegalProxyIcon from '@/assets/icons/LP_IDV_VAR_SIMB_PREF.vue'
 import LegalProxyLogotipo from '@/assets/icons/LP_IDV_VAR_LGTIPO_AMARELO.vue'
@@ -11,6 +12,7 @@ import Pictograma1Solido from '@/assets/icons/LP_PICTOGRAMA-1_SOLIDO.vue'
 import Pictograma2Solido from '@/assets/icons/LP_PICTOGRAMA-2_SOLIDO.vue'
 import Pictograma4Solido from '@/assets/icons/LP_PICTOGRAMA-4_SOLIDO.vue'
 import LogoGrafite from '@/assets/icons/LP_IDV_VAR_FLAT_GRAFITE.vue'
+import MenuIcon from '@/assets/icons/LP_ICONOGRAFIA_MENU.vue'
 
 const MY_ICONS = {
     legal_proxy_icon:{component: LegalProxyIcon},
@@ -23,13 +25,15 @@ const MY_ICONS = {
     pictograma2_solido:{component: Pictograma2Solido},
     pictograma4_solido:{component: Pictograma4Solido},
     logo_grafite:{component: LogoGrafite},
+    menu_icon:{component: MenuIcon}
 }
 
 Vue.use(Vuetify);
 
 export default new Vuetify({
     icons: {
-        values: MY_ICONS
+        values: MY_ICONS,
+        iconfont: 'fa'
     },
     theme: {
         themes: {
