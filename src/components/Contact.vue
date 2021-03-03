@@ -1,5 +1,5 @@
 <template>
-    <v-card flat tile min-height="calc( (100vh - 70px)/2 )" color="tertiary" :img="contato">
+    <v-card flat tile min-height="calc( (100vh - 50px)/2 )" color="tertiary" :img="contato">
         <v-row>
             <v-col cols="8">
                 <div :style="{'position': 'absolute', 'top': '50%', 'transform': 'translate(0, -50%)'}">
@@ -10,13 +10,13 @@
                     </v-row>
                     <v-row class="ml-5" align="center">
                         <p :class="$vuetify.breakpoint.xl?'text-h4':$vuetify.breakpoint.lg?'text-h5':'text-h6'">
-                            <v-icon class="mr-0">fas fa-phone</v-icon> 
+                            <v-icon :size="$vuetify.breakpoint.xl?'35':'20'">fas fa-phone</v-icon> 
                             +55 (11) 9 8918-2626 
-                            <v-icon class="ml-0">fab fa-whatsapp</v-icon>
+                            <v-icon :size="$vuetify.breakpoint.xl?'35':'20'">fab fa-whatsapp</v-icon>
                         </p>
 
                         <p :class="'ml-10 ' + ($vuetify.breakpoint.xl?'text-h4':$vuetify.breakpoint.lg?'text-h5':'text-h6')">
-                            <v-icon>fas fa-envelope</v-icon>
+                            <v-icon :size="$vuetify.breakpoint.xl?'35':'20'">fas fa-envelope</v-icon>
                             atendimento@legalproxy.com.br
                         </p>
                     </v-row>

@@ -1,7 +1,7 @@
 <template>
-    <v-card height="calc( (100vh - 70px)/2 )" flat tile>
+    <v-card height="calc( (100vh - 50px)/2 )" flat tile>
         <!--<v-row class="ma-0">
-            <v-card color="amarelo_claro" flat tile min-height="calc( (100vh - 70px)/2 )" width="100%">
+            <v-card color="amarelo_claro" flat tile min-height="calc( (100vh - 50px)/2 )" width="100%">
                 <v-card-title>
                     <v-row justify="center" class="ma-0 text-h3">
                         Como podemos ajudar?
@@ -18,12 +18,12 @@
             </v-card>
         </v-row>-->
         <v-row class="ma-0">
-            <v-card color="amarelo_claro" flat tile min-height="calc( (100vh - 70px)/2 )" width="100%">
-                <v-card-title :class="($vuetify.breakpoint.xl?'text-h3':$vuetify.breakpoint.lg?'text-h4':'text-h5')+' pl-10 pt-10 pb-10'">
+            <v-card color="amarelo_claro" flat tile min-height="calc( (100vh - 50px)/2 )" width="100%" class="pa-5">
+                <v-card-title :class="($vuetify.breakpoint.xl?'text-h3':$vuetify.breakpoint.lg?'text-h4':'text-h5')">
                     Perguntas frequentes
                 </v-card-title>
 
-                <v-card-text class="pl-10">
+                <v-card-text class="black--text" :style="{'position': 'absolute', 'top': '50%', 'transform': 'translate(0, -50%)'}">
                     <v-row>
                         <v-col sm="4" cols="12">
                             <p :class="$vuetify.breakpoint.xl?'text-h4':$vuetify.breakpoint.lg?'text-h5':'text-h6'">

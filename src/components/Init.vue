@@ -1,27 +1,23 @@
 <template>
-    <v-card height="calc( 100vh - 70px )" flat tile>
+    <v-card height="calc( 100vh - 50px )" flat tile>
         <v-row class="ma-0">
             <v-col sm="4" cols="12" class="ma-0 pa-0">
-                <v-card color="amarelo_claro" flat tile height="calc( (100vh - 100px)/2 )">
-                    <v-container fill-height fluid>
+                <v-card color="amarelo_claro" flat tile height="calc( (100vh - 50px)/2 )" class="pa-5">
+                    <div :style="{'position': 'absolute', 'top': '50%', 'transform': 'translate(0, -50%)', 'width': '90%'}">
                         <v-card-title 
                             :class="$vuetify.breakpoint.xl?'text-h3':$vuetify.breakpoint.lg?'text-h4':!$vuetify.breakpoint.mobile?'text-h5':'text-h6'"
                         >
                             <p class="text-break">Somos uma <i>legaltech</i> focada na intermediação de prepostos</p>
                         </v-card-title>
 
-                        <v-card-text class="pr-16 text-break">
-                            <p 
-                                :class="$vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':!$vuetify.breakpoint.mobile?'text-h8':'text-h9'"
-                            >
+                        <v-card-text class="text-break" :class="$vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':!$vuetify.breakpoint.mobile?'text-h8':'text-h9'">
                                 Aliamos tecnologia a um método inovador a fim de oferecer profissionais certificados para atender sua necessidade, otimizando custo e tempo
-                            </p>
                         </v-card-text>
-                    </v-container>
+                    </div>
                 </v-card>
             </v-col>
             <v-col class="ma-0 pa-0" v-if="!$vuetify.breakpoint.mobile">
-                <v-card height="calc( (100vh - 100px)/2 )" :img="myImage" tile flat>
+                <v-card height="calc( (100vh - 50px)/2 )" :img="myImage" tile flat>
                     <div :style="{'position': 'absolute', 'bottom': '0', 'width': '100%'}">
                         <v-row class="ma-0 mb-5" justify="center">
                             <v-btn 
@@ -48,20 +44,19 @@
             </v-col>
         </v-row>
         <v-row class="ma-0" v-if="!$vuetify.breakpoint.mobile">
-            <v-col v-for="card in cards" :key="card.icon" cols="3" class="pa-5">
+            <v-col v-for="card in cards" :key="card.icon" cols="3" class="px-3">
                 <v-card flat tile color="tertiary" min-height="calc( (100vh - 100px)/2 )">
-                    <v-row class="ma-0" justify="center">
+                    <div :style="{'position': 'absolute', 'top': '50%', 'left': '50%', 'transform': 'translate(-50%, -50%)', 'width':'90%'}" style="text-align:center">
                         <v-icon :size="$vuetify.breakpoint.xl?'300':'200'" v-text="card.icon" />
-                    </v-row>
 
-                    <div :style="{'position': 'absolute', 'bottom': '0'}">
-                        <v-row justify="center" :class="'mt-3 ' + ($vuetify.breakpoint.xl?'text-h5':$vuetify.breakpoint.lg?'text-h6':'text-h7')">
+                        <v-row justify="center" :class="($vuetify.breakpoint.xl?'text-h5':$vuetify.breakpoint.lg?'text-h6':'text-h7')">
                             <b>{{card.title}}</b>
                         </v-row>
                         
-                        <p :class="'mt-8 ' + ($vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':'text-h8')" style="text-align:center">
+                        <v-row justify="center" :class="($vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':'text-h8')">
                             {{card.text}}
-                        </p>
+                        </v-row>
+                        
                     </div>
                 </v-card>
             </v-col>

@@ -36,9 +36,6 @@ export default {
     Contact,
     Faq,
     Footer
-  },
-  mounted(){
-    console.log(this.$vuetify.breakpoint)
   }
 };
 </script>
