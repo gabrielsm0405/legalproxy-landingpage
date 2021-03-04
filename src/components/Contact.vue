@@ -1,36 +1,41 @@
 <template>
-    <v-card flat tile min-height="calc( (100vh - 50px)/2 )" color="tertiary" :img="contato">
-        <v-row>
-            <v-col cols="8">
-                <div :style="{'position': 'absolute', 'top': '50%', 'transform': 'translate(0, -50%)'}">
-                    <v-row class="ml-5">
-                        <p :class="$vuetify.breakpoint.xl?'text-h3':$vuetify.breakpoint.lg?'text-h4':'text-h5'">
-                            <b>Informações de contato</b>
-                        </p>
-                    </v-row>
-                    <v-row class="ml-5" align="center">
-                        <p :class="$vuetify.breakpoint.xl?'text-h4':$vuetify.breakpoint.lg?'text-h5':'text-h6'">
+    <v-card 
+        flat 
+        tile 
+        min-height="calc( (100vh - 50px)/2 )" 
+        color="tertiary" 
+        :img="contato"
+        class="d-flex align-content-center flex-wrap"
+    >
+        <v-row class="ma-0">
+            <v-col sm="8" cols="12">
+                <v-card-title :class="$vuetify.breakpoint.xl?'text-h3':$vuetify.breakpoint.lg?'text-h4':'text-h5'">
+                    <b>Informações de contato</b>
+                </v-card-title>
+
+                <v-row class="ma-0" align="center">
+                    <v-col sm="6" cols="12">
+                        <p :class="$vuetify.breakpoint.xl?'text-h4':$vuetify.breakpoint.lg?'text-h5':!$vuetify.breakpoint.mobile?'text-h6':'text-h7'">
                             <v-icon :size="$vuetify.breakpoint.xl?'35':'20'">fas fa-phone</v-icon> 
                             +55 (11) 9 8918-2626 
                             <v-icon :size="$vuetify.breakpoint.xl?'35':'20'">fab fa-whatsapp</v-icon>
                         </p>
-
-                        <p :class="'ml-10 ' + ($vuetify.breakpoint.xl?'text-h4':$vuetify.breakpoint.lg?'text-h5':'text-h6')">
+                    </v-col>
+                    <v-col>
+                        <p :class="$vuetify.breakpoint.xl?'text-h4':$vuetify.breakpoint.lg?'text-h5':!$vuetify.breakpoint.mobile?'text-h6':'text-h7'">
                             <v-icon :size="$vuetify.breakpoint.xl?'35':'20'">fas fa-envelope</v-icon>
                             atendimento@legalproxy.com.br
                         </p>
-                    </v-row>
-                </div>
+                    </v-col>
+                </v-row>
             </v-col>
             <v-col>
-                <div :style="{'position': 'absolute', 'top': '50%', 'transform': 'translate(0, -50%)'}">
-                    <v-row justify="center">
-                        <v-icon :size="$vuetify.breakpoint.xl?'120':'80'">$legal_proxy_icon</v-icon>
-                    </v-row>
-                    <v-row justify="center">
-                        <v-img :src="legal_proxy_logotipo" :max-width="$vuetify.breakpoint.xl?'450':'300'"></v-img>
-                    </v-row>
-                </div>
+                <v-row class="ma-0" justify="center">
+                    <v-icon :size="$vuetify.breakpoint.xl?'120':!$vuetify.breakpoint.mobile?'80':'40'">$legal_proxy_icon</v-icon>
+                </v-row>
+                <v-row class="ma-0" justify="center">
+                    <v-img :src="legal_proxy_logotipo" :max-width="$vuetify.breakpoint.xl?'450':!$vuetify.breakpoint.mobile?'300':'150'"></v-img>
+                </v-row>
             </v-col>
         </v-row>
     </v-card>

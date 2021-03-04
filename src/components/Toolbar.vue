@@ -1,9 +1,9 @@
 <template>
     <v-card flat tile>
-        <v-app-bar height="70" elevate-on-scroll app>
+        <v-app-bar height="50" elevate-on-scroll app>
             <v-toolbar-title>
                 <v-btn icon x-large @click="scroll_to('init')">
-                    <v-icon size="60" class="mx-2">$legal_proxy_icon</v-icon>
+                    <v-icon size="40" class="mx-2">$legal_proxy_icon</v-icon>
                 </v-btn>
                 <v-icon v-if="!$vuetify.breakpoint.mobile" size="200" class="mx-2">$legal_proxy_logotipo</v-icon>
             </v-toolbar-title>
@@ -30,13 +30,13 @@
                 Entrar
             </v-btn>
 
-            <v-btn
+            <v-app-bar-nav-icon
                 color="primary"
                 v-if="$vuetify.breakpoint.mobile"
                 @click.stop="drawer = !drawer"
             >
                 <v-icon>$menu_icon</v-icon>
-            </v-btn>
+            </v-app-bar-nav-icon>
         </v-app-bar>
 
         <v-navigation-drawer 
@@ -105,6 +105,8 @@ export default {
             window.open('https://app.legalproxy.com.br/')
         },
         scroll_to(to) {
+            this.drawer = false
+
             if(!this.going){
                 to = document.getElementById(to).offsetTop
 
