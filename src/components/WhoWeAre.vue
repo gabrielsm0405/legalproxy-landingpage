@@ -1,9 +1,9 @@
 <template>
-    <v-card flat tile>
+    <v-card flat tie>
         <v-row class="ma-0">
             <v-col sm="8" cols="12" class="pa-0">
                 <v-card 
-                    :min-height="$vuetify.breakpoint.mobile?'calc( 2*(100vh - 50px)/3 )':'calc( 100vh - 50px )'" 
+                    :min-height="$vuetify.breakpoint.mobile?'calc( 2*('+get_screen_height+' - 50px)/3 )':'calc( '+get_screen_height+' - 50px )'" 
                     tile 
                     flat 
                     color="amarelo_claro" 
@@ -36,16 +36,21 @@
                 </v-card>
             </v-col>
             <v-col sm="4" cols="12" class="pa-0">
-                <v-card :min-height="$vuetify.breakpoint.mobile?'calc( (100vh - 50px)/3 )':'100%'" :img="myImage" tile flat />
+                <v-card :min-height="$vuetify.breakpoint.mobile?'calc( ('+get_screen_height+' - 50px)/3 )':'100%'" :img="myImage" tile flat />
             </v-col>
         </v-row>
     </v-card>
 </template>
 
 <script>
+import utils from '../utils/utils'
+
 export default {
     data: () => ({
         myImage: require('@/assets/tech-group-meeting-flatlay.jpg')
-    })
+    }),
+    methods: {
+        get_screen_height: utils.get_screen_height
+    }
 }
 </script>

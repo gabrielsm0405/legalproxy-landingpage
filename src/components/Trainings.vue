@@ -1,8 +1,10 @@
 <template>
-    <v-card>
+    <v-card flat tile>
         <v-row class="ma-0">
             <v-col sm="4" cols="12" class="ma-0 pa-0">
-                <v-card :class="$vuetify.breakpoint.mobile?'scroller':''" :height="$vuetify.breakpoint.mobile?'calc( (100vh - 50px)/3 )':'100%'" tile flat>
+                <v-card 
+                    :class="$vuetify.breakpoint.mobile?'scroller':''" 
+                    :height="$vuetify.breakpoint.mobile?'calc( ('+get_screen_height+' - 50px)/3 )':'100%'" tile flat>
                     <v-container fill-height>
                         <v-img :height="$vuetify.breakpoint.xl?'900':!$vuetify.breakpoint.mobile?'600':'300'" contain src="@/assets/Celular.png" />
                     </v-container>
@@ -10,7 +12,7 @@
             </v-col>
             <v-col class="ma-0 pa-0">
                 <v-card 
-                    :min-height="$vuetify.breakpoint.mobile?'calc( 2*(100vh - 50px)/3 )':'calc( 100vh - 50px )'" 
+                    :min-height="$vuetify.breakpoint.mobile?'calc( 2*('+get_screen_height+' - 50px)/3 )':'calc( '+get_screen_height+' - 50px )'" 
                     tile 
                     flat 
                     class="pa-5 d-flex align-content-center flex-wrap"
@@ -37,3 +39,13 @@
         </v-row>
     </v-card>
 </template>
+
+<script>
+import utils from '../utils/utils'
+
+export default {
+    methods: {
+        get_screen_height: utils.get_screen_height
+    }
+}
+</script>

@@ -51,6 +51,6 @@ export default new Vuetify({
         },
     },
     breakpoint: {
-        mobileBreakpoint: 'xs' // This is equivalent to a value of 960
+        mobileBreakpoint: 600
     }
 });

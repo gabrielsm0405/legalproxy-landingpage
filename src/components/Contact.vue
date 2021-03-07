@@ -2,7 +2,7 @@
     <v-card 
         flat 
         tile 
-        min-height="calc( (100vh - 50px)/2 )" 
+        :min-height="'calc( ('+get_screen_height+' - 50px)/2 )'" 
         color="tertiary" 
         :img="contato"
         class="d-flex align-content-center flex-wrap"
@@ -12,21 +12,17 @@
                 <v-card-title :class="$vuetify.breakpoint.xl?'text-h3':$vuetify.breakpoint.lg?'text-h4':'text-h5'">
                     <b>Informações de contato</b>
                 </v-card-title>
-
                 <v-row class="ma-0" align="center">
-                    <v-col sm="6" cols="12">
-                        <p :class="$vuetify.breakpoint.xl?'text-h4':$vuetify.breakpoint.lg?'text-h5':!$vuetify.breakpoint.mobile?'text-h6':'text-h7'">
-                            <v-icon :size="$vuetify.breakpoint.xl?'35':'20'">fas fa-phone</v-icon> 
-                            +55 (11) 9 8918-2626 
-                            <v-icon :size="$vuetify.breakpoint.xl?'35':'20'">fab fa-whatsapp</v-icon>
-                        </p>
-                    </v-col>
-                    <v-col>
-                        <p :class="$vuetify.breakpoint.xl?'text-h4':$vuetify.breakpoint.lg?'text-h5':!$vuetify.breakpoint.mobile?'text-h6':'text-h7'">
-                            <v-icon :size="$vuetify.breakpoint.xl?'35':'20'">fas fa-envelope</v-icon>
-                            atendimento@legalproxy.com.br
-                        </p>
-                    </v-col>
+                    <p :class="$vuetify.breakpoint.xl?'text-h4':$vuetify.breakpoint.lg?'text-h5':!$vuetify.breakpoint.mobile?'text-h6':'text-h7'">
+                        <v-icon :size="$vuetify.breakpoint.xl?'35':'20'">fas fa-phone</v-icon> 
+                        +55 (11) 9 8918-2626 
+                        <v-icon :size="$vuetify.breakpoint.xl?'35':'25'">fab fa-whatsapp</v-icon>
+                    </p>
+                    <v-spacer></v-spacer>
+                    <p :class="$vuetify.breakpoint.xl?'text-h4':$vuetify.breakpoint.lg?'text-h5':!$vuetify.breakpoint.mobile?'text-h6':'text-h7'">
+                        <v-icon :size="$vuetify.breakpoint.xl?'35':'20'">fas fa-envelope</v-icon>
+                        atendimento@legalproxy.com.br
+                    </p>
                 </v-row>
             </v-col>
             <v-col>
@@ -42,11 +38,16 @@
 </template>
 
 <script>
+import utils from '../utils/utils'
+
 export default {
     data: () => ({
         legal_proxy_icon: require('@/assets/LP_IDV_VAR_SIMB_PREF.png'),
         legal_proxy_logotipo: require('@/assets/LP_IDV_VAR_LGTIPO_AMARELO.png'),
         contato: require('@/assets/contato.png')
-    })
+    }),
+    methods: {
+        get_screen_height: utils.get_screen_height
+    }
 }
 </script>

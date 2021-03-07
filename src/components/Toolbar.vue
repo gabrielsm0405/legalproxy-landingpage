@@ -10,12 +10,12 @@
 
             <v-spacer v-if="!$vuetify.breakpoint.mobile"></v-spacer>
             <v-toolbar-items v-if="!$vuetify.breakpoint.mobile">
-                <v-btn x-large text @click="scroll_to('init')" :class="$vuetify.breakpoint.xl?'text-h7':$vuetify.breakpoint.lg?'text-h8':'text-h9'">Início</v-btn>
-                <v-btn x-large text @click="scroll_to('product')" :class="$vuetify.breakpoint.xl?'text-h7':$vuetify.breakpoint.lg?'text-h8':'text-h9'">Produto</v-btn>
-                <v-btn x-large text @click="scroll_to('who_we_are')" :class="$vuetify.breakpoint.xl?'text-h7':$vuetify.breakpoint.lg?'text-h8':'text-h9'">Quem Somos</v-btn>
-                <v-btn x-large text @click="scroll_to('trainings')" :class="$vuetify.breakpoint.xl?'text-h7':$vuetify.breakpoint.lg?'text-h8':'text-h9'">Treinamentos</v-btn>
-                <v-btn x-large text @click="scroll_to('faq')" :class="$vuetify.breakpoint.xl?'text-h7':$vuetify.breakpoint.lg?'text-h8':'text-h9'">FAQ</v-btn>
-                <v-btn x-large text @click="scroll_to('contact')" :class="$vuetify.breakpoint.xl?'text-h7':$vuetify.breakpoint.lg?'text-h8':'text-h9'">Contato</v-btn>
+                <v-btn large text @click="scroll_to('init')" :class="$vuetify.breakpoint.xl?'text-h7':$vuetify.breakpoint.lg?'text-h8':'text-h9'">Início</v-btn>
+                <v-btn large text @click="scroll_to('product')" :class="$vuetify.breakpoint.xl?'text-h7':$vuetify.breakpoint.lg?'text-h8':'text-h9'">Produto</v-btn>
+                <v-btn large text @click="scroll_to('who_we_are')" :class="$vuetify.breakpoint.xl?'text-h7':$vuetify.breakpoint.lg?'text-h8':'text-h9'">Quem Somos</v-btn>
+                <v-btn large text @click="scroll_to('trainings')" :class="$vuetify.breakpoint.xl?'text-h7':$vuetify.breakpoint.lg?'text-h8':'text-h9'">Treinamentos</v-btn>
+                <v-btn large text @click="scroll_to('faq')" :class="$vuetify.breakpoint.xl?'text-h7':$vuetify.breakpoint.lg?'text-h8':'text-h9'">FAQ</v-btn>
+                <v-btn large text @click="scroll_to('contact')" :class="$vuetify.breakpoint.xl?'text-h7':$vuetify.breakpoint.lg?'text-h8':'text-h9'">Contato</v-btn>
             </v-toolbar-items>
 
             <v-spacer></v-spacer>
@@ -26,6 +26,7 @@
                 color="amarelo_claro primary--text" 
                 @click="go_to_legalproxy" 
                 :class="$vuetify.breakpoint.xl?'text-h7':$vuetify.breakpoint.lg?'text-h8':'text-h9'"
+                small
             >
                 Entrar
             </v-btn>

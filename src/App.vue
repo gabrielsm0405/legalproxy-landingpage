@@ -2,12 +2,12 @@
   <v-app>
     <Toolbar/>
     <v-main>
-      <Init id="init" />
-      <Product id="product" />
-      <WhoWeAre id="who_we_are" />
-      <Trainings id="trainings" />
-      <Faq id="faq" />
-      <Contact id="contact" />
+      <Init :screen_height="screen_height" id="init" />
+      <Product :screen_height="screen_height" id="product" />
+      <WhoWeAre :screen_height="screen_height" id="who_we_are" />
+      <Trainings :screen_height="screen_height" id="trainings" />
+      <Faq :screen_height="screen_height" id="faq" />
+      <Contact :screen_height="screen_height" id="contact" />
     </v-main>
     <Footer />
   </v-app>
@@ -36,6 +36,19 @@ export default {
     Contact,
     Faq,
     Footer
+  },
+  data: () => ({
+    screen_height: screen.height
+  }),
+  computed: {
+    screen_height_change(){
+      return screen.height
+    }
+  },
+  watch: {
+    screen_height_change(){
+      this.screen_height = this.screen_height_change
+    }
   }
 };
 </script>
