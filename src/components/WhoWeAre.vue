@@ -19,11 +19,11 @@
                         </p>
 
                         <p :class="'mt-10 '+($vuetify.breakpoint.xl?'text-h5':$vuetify.breakpoint.lg?'text-h6':'text-h7')">
-                            Através da iniciativa de profissionais com vasta experiência no meio jurídico juntamente com pessoas que respiram tecnologia, surgiu a ideia de simplificar a busca e o gerenciamento de prepostos através da tecnologia. 
+                            Através da iniciativa de profissionais com vasta experiência no meio jurídico juntamente com pessoas que respiram tecnologia, surgiu a ideia de <strong>simplificar a busca e o gerenciamento de prepostos através da tecnologia</strong>. 
                         </p>
 
                         <p :class="$vuetify.breakpoint.xl?'text-h5':$vuetify.breakpoint.lg?'text-h6':'text-h7'">
-                            Somos uma legaltech focada na intermediação de prepostos de forma totalmente online e automatizada. 
+                            Somos uma <strong>legaltech focada na intermediação de prepostos</strong> de forma totalmente online e automatizada. 
                         </p>
                     </v-card-text>
 

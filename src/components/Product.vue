@@ -28,8 +28,10 @@
                                 <v-col cols="2">
                                     <v-icon :size="$vuetify.breakpoint.xl?'220':$vuetify.breakpoint.lg?'120':!$vuetify.breakpoint.mobile?'90':'60'" v-text="card.icon" />
                                 </v-col>
-                                <v-col :class="$vuetify.breakpoint.xl?'text-h5':$vuetify.breakpoint.lg?'text-h6':'text-h7'">
-                                    {{card.text}}
+                                <v-col 
+                                    :class="$vuetify.breakpoint.xl?'text-h5':$vuetify.breakpoint.lg?'text-h6':'text-h7'"
+                                    v-html="card.text"
+                                >
                                 </v-col>
                             </v-row>
                         </v-card>
@@ -49,15 +51,15 @@ export default {
         cards: [
             {
                 'icon': '$pictograma1_solido',
-                'text': 'Somos uma plataforma digital de mediação de prepostos que permite que você acompanhe todos os detalhes da atuação do preposto.'
+                'text': 'Somos uma plataforma digital de <strong>mediação de prepostos</strong> que permite que você acompanhe todos os detalhes da atuação do <strong>preposto</strong>.'
             },
             {
                 'icon': '$pictograma2_solido',
-                'text': 'Aliamos treinamentos jurídicos voltados para a atuação como preposto, tecnologia com geolocalização em tempo real e seleção inteligente de prepostos em uma única plataforma simples e intuitiva.'
+                'text': 'Aliamos <strong>treinamentos jurídicos</strong> voltados para a atuação como preposto, <strong>tecnologia com geolocalização em tempo real</strong> e <strong>seleção inteligente de prepostos</strong> em uma única plataforma simples e intuitiva.'
             },
             {
                 'icon': '$pictograma4_solido',
-                'text': 'Tudo isto para trazer segurança, rapidez e qualidade na representação da sua empresa em audiências.'
+                'text': 'Tudo isto para trazer segurança, rapidez e qualidade na <strong>representação da sua empresa em audiências</strong>.'
             }
         ]
     }),

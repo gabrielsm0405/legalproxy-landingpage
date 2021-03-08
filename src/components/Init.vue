@@ -8,7 +8,7 @@
                             :class="$vuetify.breakpoint.xl?'text-h3':$vuetify.breakpoint.lg?'text-h4':!$vuetify.breakpoint.mobile?'text-h5':'text-h6'"
                             class="text-break"
                         >
-                            <b>Somos uma <i>legaltech</i> focada na intermediação de prepostos</b>
+                            <b>Somos uma <i><strong>legaltech</strong></i> focada na <strong>intermediação de prepostos</strong></b>
                         </v-card-title>
                         
                         <v-card-text class="text-break black--text" :class="$vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':!$vuetify.breakpoint.mobile?'text-h8':'text-h9'">
@@ -29,7 +29,7 @@
                                 color="proxy_color_light primary--text" 
                                 small
                             >
-                                Quero ser preposto
+                                Quero ser <strong>preposto</strong>
                             </v-btn>
                         </v-row>
                     </v-card>
@@ -69,12 +69,20 @@
                         <v-icon :size="$vuetify.breakpoint.xl?'300':$vuetify.breakpoint.lg?'200':'100'" v-text="card.icon" />
                     </v-row>
                         
-                    <v-row justify="center" :class="($vuetify.breakpoint.xl?'text-h5':$vuetify.breakpoint.lg?'text-h6':'text-h7')" class="ma-0">
-                        <b>{{card.title}}</b>
+                    <v-row 
+                        justify="center" 
+                        :class="($vuetify.breakpoint.xl?'text-h5':$vuetify.breakpoint.lg?'text-h6':'text-h7')" 
+                        class="ma-0"
+                        v-html="'<b>'+card.title+'</b>'"
+                    >
                     </v-row>
                     
-                    <v-row justify="center" :class="($vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':'text-h8')" class="ma-0 mb-5">
-                        {{card.text}}
+                    <v-row 
+                        justify="center" 
+                        :class="($vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':'text-h8')" 
+                        class="ma-0 mb-5"
+                        v-html="card.text"
+                    >
                     </v-row>
                 </v-card>
             </v-col>
@@ -113,8 +121,8 @@ export default {
         cards: [
             {
                 'icon': '$pictograma1',
-                'title': 'Preposto já!',
-                'text': 'Com a Legal Proxy você contrata o preposto certo para sua empresa.'
+                'title': '<strong>Preposto</strong> já!',
+                'text': 'Com a Legal Proxy você <strong>contrata o preposto certo para sua empresa</strong>.'
             },
             {
                 'icon': '$pictograma2',
@@ -124,7 +132,7 @@ export default {
             {
                 'icon': '$pictograma3',
                 'title': 'Certificação garantida',
-                'text': 'Nossa rede conta com prepostos certificados em representação jurídica.'
+                'text': 'Nossa rede conta com <strong>prepostos certificados em representação jurídica</strong>.'
             },
             {
                 'icon': '$pictograma4',
