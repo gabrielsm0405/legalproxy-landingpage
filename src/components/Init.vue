@@ -3,7 +3,7 @@
         <v-card flat tile>
             <v-row class="ma-0">
                 <v-col sm="4" cols="12" class="ma-0 pa-0">
-                    <v-card color="amarelo_claro" flat tile :min-height="'calc( ('+get_screen_height+' -50px)/2 )'" class="pa-5 d-flex align-content-center flex-wrap">
+                    <v-card color="amarelo_claro" flat tile :min-height="'calc( ('+get_screen_height()+' - 50px)/2 )'" class="pa-5 d-flex align-content-center flex-wrap">
                         <v-card-title 
                             :class="$vuetify.breakpoint.xl?'text-h3':$vuetify.breakpoint.lg?'text-h4':!$vuetify.breakpoint.mobile?'text-h5':'text-h6'"
                             class="text-break"
@@ -64,7 +64,7 @@
         </v-card>
         <v-row class="ma-0" v-if="!$vuetify.breakpoint.mobile">
             <v-col v-for="card in cards" :key="card.icon" cols="3" class="px-3">
-                <v-card flat tile color="tertiary" :min-height="'calc( ('+get_screen_height+' -50px)/2 )'" style="text-align:center" class="d-flex align-content-center flex-wrap">
+                <v-card flat tile color="tertiary" :min-height="'calc( ('+(get_screen_height())+' - 50px)/2 )'" style="text-align:center" class="d-flex align-content-center flex-wrap">
                     <v-row class="ma-0" justify="center" style="width: 100%">
                         <v-icon :size="$vuetify.breakpoint.xl?'300':$vuetify.breakpoint.lg?'200':'100'" v-text="card.icon" />
                     </v-row>
@@ -88,7 +88,7 @@
             </v-col>
         </v-row>
 
-        <v-carousel :height="'calc( ('+get_screen_height+' -50px)/2 )'" cycle interval="5000" :show-arrows="false" hide-delimiters v-if="$vuetify.breakpoint.mobile">
+        <v-carousel :height="'calc( ('+get_screen_height()+' - 50px)/2 )'" cycle interval="5000" :show-arrows="false" hide-delimiters v-if="$vuetify.breakpoint.mobile">
             <v-carousel-item
                 v-for="(card, i) in cards"
                 :key="i"
@@ -96,15 +96,23 @@
             >
                 <v-card flat tile color="black--text tertiary" height="calc( (100vh - 100px)/2 )" style="text-align:center" class="pa-5 d-flex align-content-center flex-wrap">
                     <v-row justify="center" style="width: 100%" class="ma-0">
-                        <v-icon :size="$vuetify.breakpoint.xl?'300':'200'" v-text="card.icon" />
+                        <v-icon :size="$vuetify.breakpoint.xl?'300':'150'" v-text="card.icon" />
                     </v-row>
                         
-                    <v-row justify="center" :class="($vuetify.breakpoint.xl?'text-h5':$vuetify.breakpoint.lg?'text-h6':'text-h7')" class="ma-0">
-                        <b>{{card.title}}</b>
+                    <v-row 
+                        justify="center" 
+                        :class="($vuetify.breakpoint.xl?'text-h5':$vuetify.breakpoint.lg?'text-h6':'text-h7')" 
+                        class="ma-0"
+                        v-html="'<b>'+card.title+'</b>'"
+                    >
                     </v-row>
                     
-                    <v-row justify="center" :class="($vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':'text-h8')" class="ma-0 mb-5">
-                        {{card.text}}
+                    <v-row 
+                        justify="center" 
+                        :class="($vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':'text-h8')" 
+                        class="ma-0 mb-5"
+                        v-html="card.text"
+                    >
                     </v-row>
                 </v-card>
             </v-carousel-item>
@@ -121,8 +129,8 @@ export default {
         cards: [
             {
                 'icon': '$pictograma1',
-                'title': '<strong>Preposto</strong> já!',
-                'text': 'Com a Legal Proxy você <strong>contrata o preposto certo para sua empresa</strong>.'
+                'title': 'Preposto já!',
+                'text': 'Com a Legal Proxy você contrata o preposto certo para sua empresa.'
             },
             {
                 'icon': '$pictograma2',
@@ -132,7 +140,7 @@ export default {
             {
                 'icon': '$pictograma3',
                 'title': 'Certificação garantida',
-                'text': 'Nossa rede conta com <strong>prepostos certificados em representação jurídica</strong>.'
+                'text': 'Nossa rede conta com prepostos certificados em representação jurídica.'
             },
             {
                 'icon': '$pictograma4',

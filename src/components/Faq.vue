@@ -1,6 +1,6 @@
 <template>
     <!--<v-row class="ma-0">
-        <v-card color="amarelo_claro" flat tile :min-height="'calc( ('+get_screen_height+' - 50px)/2 )'" width="100%">
+        <v-card color="amarelo_claro" flat tile :min-height="'calc( ('+get_screen_height()+' - 50px)/2 )'" width="100%">
             <v-card-title>
                 <v-row justify="center" class="ma-0 text-h3">
                     Como podemos ajudar?
@@ -21,7 +21,7 @@
             color="amarelo_claro" 
             flat 
             tile 
-            :min-height="'calc( ('+get_screen_height+' - 50px)/2 )'" 
+            :min-height="'calc( ('+get_screen_height()+' - 50px)/2 )'" 
             width="100%" 
             class="pa-5 d-flex align-content-center flex-wrap"
         >

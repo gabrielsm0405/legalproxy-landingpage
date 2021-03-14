@@ -2,7 +2,7 @@
     <v-card 
         flat 
         tile 
-        :min-height="'calc( ('+get_screen_height+' - 50px)/2 )'" 
+        :min-height="'calc( ('+get_screen_height()+' - 50px)/2 )'" 
         color="tertiary" 
         :img="contato"
         class="d-flex align-content-center flex-wrap"

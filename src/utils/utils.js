@@ -1,7 +1,7 @@
 export default {
     get_screen_height(){
-        if(screen.height > 1000) return '950'
+        if(screen.height > 1000) return '600px'
 
-        else return screen.height.toString()
+        return '100vh'
     }
 }

@@ -3,7 +3,7 @@
         <v-row class="ma-0">
             <v-col sm="8" cols="12" class="pa-0">
                 <v-card 
-                    :min-height="$vuetify.breakpoint.mobile?'calc( 2*('+get_screen_height+' - 50px)/3 )':'calc( '+get_screen_height+' - 50px )'" 
+                    :min-height="$vuetify.breakpoint.mobile?'calc( 2*('+get_screen_height()+' - 50px)/3 )':'calc( '+get_screen_height()+' - 50px )'" 
                     tile 
                     flat 
                     color="amarelo_claro" 
@@ -18,7 +18,8 @@
                             <b>Somos apaixonados por Direito e Tech</b>
                         </p>
 
-                        <p :class="'mt-10 '+($vuetify.breakpoint.xl?'text-h5':$vuetify.breakpoint.lg?'text-h6':'text-h7')">
+                        <p 
+                            :class="'mt-10 '+(!$vuetify.breakpoint.mobile?'pt-10 ':'')+($vuetify.breakpoint.xl?'text-h5':$vuetify.breakpoint.lg?'text-h6':'text-h7')">
                             Através da iniciativa de profissionais com vasta experiência no meio jurídico juntamente com pessoas que respiram tecnologia, surgiu a ideia de <strong>simplificar a busca e o gerenciamento de prepostos através da tecnologia</strong>. 
                         </p>
 
@@ -36,7 +37,7 @@
                 </v-card>
             </v-col>
             <v-col sm="4" cols="12" class="pa-0">
-                <v-card :min-height="$vuetify.breakpoint.mobile?'calc( ('+get_screen_height+' - 50px)/3 )':'100%'" :img="myImage" tile flat />
+                <v-card :min-height="$vuetify.breakpoint.mobile?'calc( ('+get_screen_height()+' - 50px)/3 )':'100%'" :img="myImage" tile flat />
             </v-col>
         </v-row>
     </v-card>

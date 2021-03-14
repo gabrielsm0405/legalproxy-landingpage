@@ -4,17 +4,19 @@
             <v-col sm="4" cols="12" class="ma-0 pa-0">
                 <v-card 
                     :class="$vuetify.breakpoint.mobile?'scroller':''" 
-                    :height="$vuetify.breakpoint.mobile?'calc( ('+get_screen_height+' - 50px)/3 )':'100%'" tile flat>
-                    <v-container fill-height>
-                        <v-img :height="$vuetify.breakpoint.xl?'900':!$vuetify.breakpoint.mobile?'600':'300'" contain src="@/assets/Celular.png" />
-                    </v-container>
+                    :height="$vuetify.breakpoint.mobile?'calc( ('+get_screen_height()+' - 50px)/3 )':'calc('+get_screen_height()+' - 50px)'" 
+                    flat
+                    tile
+                    class="pa-5 d-flex align-content-center flex-wrap"
+                >
+                    <v-img :height="$vuetify.breakpoint.xl?'900':!$vuetify.breakpoint.mobile?'600':'300'" contain src="@/assets/Celular.png" />
                 </v-card>
             </v-col>
             <v-col class="ma-0 pa-0">
                 <v-card 
-                    :min-height="$vuetify.breakpoint.mobile?'calc( 2*('+get_screen_height+' - 50px)/3 )':'calc( '+get_screen_height+' - 50px )'" 
-                    tile 
-                    flat 
+                    :min-height="$vuetify.breakpoint.mobile?'calc( 2*('+get_screen_height()+' - 50px)/3 )':'calc( '+get_screen_height()+' - 50px )'" 
+                    flat
+                    tile
                     class="pa-5 d-flex align-content-center flex-wrap"
                 >
                     <v-row justify="center" class="ma-0">
