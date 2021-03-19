@@ -4,7 +4,7 @@
             <v-col sm="4" cols="12" class="ma-0 pa-0">
                 <v-card 
                     :class="$vuetify.breakpoint.mobile?'scroller':''" 
-                    :height="$vuetify.breakpoint.mobile?'calc( ('+get_screen_height()+' - 50px)/3 )':'calc('+get_screen_height()+' - 50px)'" 
+                    :min-height="$vuetify.breakpoint.mobile?'calc( ('+get_screen_height()+' - 50px)/3 )':'calc('+get_screen_height()+' - 50px)'" 
                     flat
                     tile
                     class="pa-5 d-flex align-content-center flex-wrap"
