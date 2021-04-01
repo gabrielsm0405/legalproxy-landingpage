@@ -31,29 +31,11 @@
 
             <v-card-text class="black--text">
                 <v-row>
-                    <v-col sm="4" cols="12">
-                        <p :class="$vuetify.breakpoint.xl?'text-h4':$vuetify.breakpoint.lg?'text-h5':'text-h6'">
-                            Empresa
-                        </p>
-                        <v-row 
-                            :class="'ma-0 mb-2 '+($vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':'text-h8')"
-                            v-for="question in company_questions" 
-                            :key="question"
-                        >
-                            <a>{{question}}</a>
-                        </v-row>
+                    <v-col sm="5" cols="12">
+                        <FaqList title="Empresa" :questions_list="company_questions" />
                     </v-col>
-                    <v-col sm="4" cols="12">
-                        <p :class="$vuetify.breakpoint.xl?'text-h4':$vuetify.breakpoint.lg?'text-h5':'text-h6'">
-                            Proxie
-                        </p>
-                        <v-row 
-                            :class="'ma-0 mb-2 '+($vuetify.breakpoint.xl?'text-h6':$vuetify.breakpoint.lg?'text-h7':'text-h8')"
-                            v-for="question in company_questions" 
-                            :key="question"
-                        >
-                            <a>{{question}}</a>
-                        </v-row>
+                    <v-col sm="5" cols="12">
+                        <FaqList title="Proxy" :questions_list="proxy_questions" />
                     </v-col>
                 </v-row>
             </v-card-text>
@@ -63,15 +45,58 @@
 
 <script>
 import utils from '../utils/utils'
+import FaqList from './FaqList'
 
 export default {
     data: () => ({
+        proxy_questions: [
+            {
+                'content': 'Fui reprovado na prova de preposto. Posso refazer o teste?',
+                'answer': 'Sim. O futuro PROXIE poderá refazer a prova de certificação de preposto após 15 dias corridos da última prova.'
+            },
+            {
+                'content': 'Realizei a audiência. Em quanto tempo meu crédito estará disponível?',
+                'answer': 'Em até 2 dias úteis após a realização da audiência o crédito estará disposto na “carteira” do PROXIE. O acesso a carteira é possível através do aplicativo ou website LEGAL PROXY.'
+            },
+            {
+                'content': 'Como são distribuídas as audiências para os prepostos?',
+                'answer': 'O LEGAL PROXY, por meio de seu sistema, analisa os PROXIES disponíveis, mais bem qualificados e mais próximos geograficamente, para disponibilizar o preposto ideal para o cliente.'
+            },
+            {
+                'content': 'Já concluí meu certificado LEGAL PROXY para preposto, mas ainda não recebi nenhuma audiência. Quando receberei uma solicitação?',
+                'answer': 'Este tempo dependerá da quantidade de demandas disponibilizadas por clientes no momento, bem como a quantidade de prepostos cadastrados na plataforma.'
+            },
+            {
+                'content': 'Gostaria de desativar minha conta, sem excluí-la. É possível?',
+                'answer': 'Sim. Existem ambas as opções dentro do website ou app LEGAL PROXY, tanto para exclusão, quanto para desativação de conta.'
+            },
+        ],
         company_questions: [
-            'Lorem Ipsum is simply dummy text of the printing1',
-            'Lorem Ipsum is simply dummy text of the printing2',
-            'Lorem Ipsum is simply dummy text of the printing3',
+            {
+                'content': 'O preposto selecionado para realizar minha audiência desistiu. O que devo fazer?',
+                'answer': 'A plataforma avisará ao CLIENTE sobre a desistência do PROXIE e informará o novo PROXIE mais bem qualificado de acordo com sua geolocalização e avaliações.'
+            },
+            {
+                'content': 'O PROXIE indicado está demorando para aceitar a solicitação. Devo me preocupar?',
+                'answer': 'Não. Os PROXIES têm um prazo para aceitar a solicitação de até 24h. Caso não ocorra neste prazo, a plataforma enviará automaticamente um novo convite para outro PROXIE e avisará ao CLIENTE.'
+            },
+            {
+                'content': 'É possível cadastrar uma audiência e solicitar um preposto com crédito insuficiente em conta?',
+                'answer': 'Não. Para buscar e selecionar um PROXIE e posterior realização de audiência, é necessário POSSUIR créditos para contratação.'
+            },
+            {
+                'content': 'Preciso trocar o “ponto focal” de uma ou mais empresas cadastradas. É possível?',
+                'answer': 'Sim, o administrador da conta de CLIENTE tem total liberdade de incluir ou remover os “pontos focais”'
+            },
+            {
+                'content': 'Tenho muitas demandas para cadastro imediato na plataforma, há alguma maneira de incluí-las de uma única vez?',
+                'answer': 'Sim, o LEGAL PROXY disponibiliza para os usuários uma planilha de Excel disponível para download, que deverá ser preenchida conforme os campos já estipulados e, após, realizado o upload em uma das plataformas LEGAL PROXY.'
+            },
         ]
     }),
+    components: {
+        FaqList
+    },
     methods: {
         get_screen_height: utils.get_screen_height
     }
